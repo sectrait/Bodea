@@ -37,8 +37,11 @@ falls back to system fonts when unavailable.
 | `about.html` | Company information |
 | `login.html`, `register.html` | Demo account forms |
 | `styles.css`, `script.js` | Shared styling and browser interactions |
-| `img/`, `favicon.svg`, `og.png` | Website images and graphics |
+| `img/` | All website images, logo, favicons, and touch icon |
 | `.nojekyll` | Serve the static site without Jekyll processing |
+
+The favicon set includes a scalable SVG, a 16/32/48-pixel ICO, a 64-pixel PNG
+fallback, and a 180-pixel Apple touch icon. All pages use relative `img/` paths.
 
 ## Publish to GitHub Pages
 
