@@ -54,14 +54,16 @@ Using a GitHub account with write access, publish the files to the repository's
 A repository administrator can then enable deployment:
 
 1. Open **Settings > Pages** in the repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select **main** and **/ (root)**, then click **Save**.
-4. Wait for the Pages deployment to complete under **Actions**.
+2. Under **Build and deployment**, choose **GitHub Actions**.
+3. Push to `main`, or run **Deploy static content to Pages** from **Actions**.
+4. Wait for both the upload and deployment jobs to complete.
 5. Open <https://sectrait.github.io/Bodea/> and check navigation and images.
 
 The URL becomes available only after Pages is enabled and deployment succeeds.
 Keep links and asset paths relative so the site works under the `/Bodea/` path.
 Subsequent pushes to `main` automatically redeploy the site.
+The deployment waits for the upload job and uses its attempt-specific artifact
+name, so retries do not select artifacts from earlier attempts.
 
 ## License
 
